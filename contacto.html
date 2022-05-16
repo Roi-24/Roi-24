@@ -1,0 +1,172 @@
+<DOCTYPE html>
+<html lang="gl">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Palestina.gal</title>
+        <link rel="stylessheet" href="Estilos/Normalize.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet"> 
+        <link rel="preload" href="css/styles.css" as="style">
+        <link href="Estilos/Estilo7.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="portada portada-contido">
+            <h1>Palestina.<span>gal</span></h1>
+        </header>
+            <nav class="nav-bg menu-principal">
+                 <!-- O nav deberia ir dentro do header, mais como estiven facendo tantas probas, xa 
+                non me da tempo a refacelo todo-->
+                <a href="Inicio.html">Inicio</a>
+                <a href="schoolruns.html">School Runs</a>
+                <a href="recolleita.html">Recolleita e prantio</a>
+                <a href="valdojordan.html">Val do Jordan</a>
+                <a href="entrevistas.html">Entrevistas</a>
+                <a href="camposrefug.html">Campos de refugiadas</a>
+            </nav>
+        <main >
+            <section class="contentor sombra">
+                <!-- Aqui a clase contenedor e a clase sombra podia perfectamente poñerlles as 
+                    caracteristicas no css a etiqueta section e seria o mesmo-->
+            <header>
+                <h2>Contacto</h2>
+            </header>
+                <form action="form-result.php" autocomplete="on" method="GET" target="_blank" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Formulario de voluntariado</legend>
+                    <div class="campo">
+                        <label for="lnome">Insire o teu nome:</label><br>
+                        <input type="text" id="lnome" name="lnome" size="100%" autocomplete="on"
+                        pattern="[A-Z,a-z]{3-16}" placeholder="insire o teu nome" required title="Ten que inserir un nome" /><br>
+                        <!-- A usuaria so poderá meter unha palabra de 3 a 16 caracteres entre ás letras da A-Z y a-z -->
+                    </div>
+                    <div class="campo">
+                        <label for="lapelidos">Insire os teus apelidos:</label><br>
+                        <input type="text" id="lapelidos" name="lapelidos" size="100%" autocomplete="on"
+                            pattern="[A-Za-z]{3-20}" placeholder="insire os teus apelidos" required title="Ten que inserir os apelidos" /><br>
+                            <!-- A usuaria so poderá meter unha palabra de 3 a 20 caracteres entre ás letras da A-Z y a-z -->
+                    </div>
+                    <div class="campo">
+                        <label for="lidade">Cal é a túa idade</label><br>
+                        <input type="number" id="lidade1" name="lidade" size="100%" autocomplete="off" /><br>
+                        <!-- vai sen autocompletar por que coido que este non é un campo requerido-->
+                    </div>
+                    <div class="campo">
+                        <label for="ltelefono">Insire un teléfono de contacto:</label><br>
+                        <input type="text" id="ltelefono" name="ltelefono" size="100%" autocomplete="off"
+                            multiple="multiple" placeholder="insire un número de teléfono" required title="Ten que inserir un correo electrónico" /><br>
+                    </div>
+                    <div class="campo">
+                        <label for="lcorreo">Insire un correo de contacto:</label><br>
+                        <input type="email" id="lcorreo" name="lcorreo" size="100%" autocomplete="on" placeholder="insire un correo electrónico" />
+                    </div>                                   
+                    <div class="campo">
+                        <p>Apoias a causa Palestina?</p>
+                        <label for="cbox1">Click me</label>
+                        <input type="radio" id="cbox1" name="ABCD" value="A" autocomplete="off" checked> Si <br>
+                        <label for="cbox2">Click me</label>
+                        <input type="radio" id="cbox2" name="ABCD" value="B" autocomplete="off"> Non <br>
+                        <label for="cbox3">Click me</label>
+                        <input type="radio" id="cbox3" name="ABCD" value="C" autocomplete="off"> Quero coñecer máis
+                        <!-- Marquei checked nesta opción por que me parece o lóxico -->
+                    </div>
+                    <div class="campo">
+                        <p>En que estas interesada?</p>
+                        <label for="VOL">Voluntariado</label>
+                        <input type="checkbox" id="VOL" value="A" autocomplete="off"> Voluntariado
+                        <input type="checkbox" id="TRT" value="B" autocomplete="off"> Trabalhos de tradución
+                        <input type="checkbox" id="ACC" value="C" autocomplete="off"> Accións
+                        <input type="checkbox" id="OUT" value="D" autocomplete="off"> Outra
+                         <!-- Podese por varias opcións -->
+                    </div>
+                    <div class="campo">
+                        <p>Se marcaches Voluntariado, que tipo queres?</p>
+                        <input type="checkbox" name="ABCDEFG" value="A" autocomplete="off"> Schoolruns
+                        <input type="checkbox" name="ABCDEFG" value="B" autocomplete="off"> Manifestacións
+                        <input type="checkbox" name="ABCDEFG" value="C" autocomplete="off"> Entrevistas
+                        <input type="checkbox" name="ABCDEFG" value="D" autocomplete="off"> Bioconstrución no Val do Jordan
+                        <input type="checkbox" name="ABCDEFG" value="E" autocomplete="off"> Recolleita da oliva
+                        <input type="checkbox" name="ABCDEFG" value="F" autocomplete="off"> Prantio de oliveiras
+                        <input type="checkbox" name="ABCDEFG" value="G" autocomplete="off"> Aulas
+                    </div>
+                    <div class="campo barra">
+                        <p><label for="lmedo">Valora a cantidade de medo que tes ante situacións tensas?</p>
+                            <h5>Move a barra (isto é para saber que tipo de cousas poderias facer la)</h5>
+                            </label>
+                            <input type="range" id="lmedo1" name="lmedo" size="100%" autocomplete="off" />
+                             <!--Tentaba ver que cantidade do medo tiña esta persoa a situacións tensas mais falta a onde esta nada ou moito  -->
+                    </div>
+                    <div class="campo">
+                        <fieldset>
+                            <legend>Escolle en que logar querrias estar:</legend>
+                            <label for="provincia">Escolle a provincia::</label>
+                            <select  name="proviancia" id="proviancia">
+                                <optgroup label="Cisjordania">
+                                    <option value="sp">Sen Preferencia</option>
+                                    <option value="ad">Ad Dhahiriya</option>
+                                    <option value="al">Al Bireh</option>
+                                    <option value="be">Belén</option>
+                                    <option value="du">Dura</option>
+                                    <option value="he">Hebron</option>
+                                    <option value="je">Jerusalén</option>
+                                    <option value="ka">Kalkilia</option>
+                                    <option value="na">Nablús</option>
+                                    <option value="ra">Ramala</option>
+                                    <option value="tu">Tulkarem</option>
+                                    <option value="ya">Yatta</option>
+                                    <option value="ye">Yenín</option>
+                                </optgroup>
+                                <optgroup label="Gaza">
+                                    <option value="norte">Norte</option>
+                                    <option value="sur">Sur</option>
+                                </optgroup>
+                            </select> 
+                        </fieldset>
+                        <div>
+                            <p>Cales son as túas motivacións para ir de voluntaria a Palestina:</p>
+                                <textarea name="mensaxe" rows="5" cols="80%" maxlength="400"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </div>
+                                <h5>Ten dereito a cancelación rectificación dos seus datos persoais.</h5>
+                </fieldset>
+                </form>
+            </section>
+            <aside>
+                <!--Nesta parte do aside, o nav vai cos ul e os li, inda que estéticamente non vaia ben-->
+                <nav>
+                    <h4>Outras organizacións</h4>
+                        <ul>
+                            <li><a href="https://bdsmovement.net/es"target="_blank"><strong>BDS international</strong></a></li>
+                            <li><a href="https://palsolidarity.org/"target="_blank"><strong>ISM</strong></a></li>
+                            <li><a href="https://www.breakingthesilence.org.il/"target="_blank"><strong>Breaken the silence</strong></a></li>
+                            <li><a href="https://web.archive.org/web/20070312015741/http://www.awalls.org/"target="_blank"><strong>Anarkist agains the wall</strong></a></li>
+                            <li><a href="https://larecolectiva.wordpress.com/"target="_blank"><strong>La Recolectiva</strong></a></li>
+                            <li><a href="https://palestinalibre.org/"target="_blank"><strong>Palestinalibre.org</strong></a></li>
+                        </ul>
+                    <h4>Documentos de interese</h4>
+                        <ul>
+                            <li><a href="documentos\Ref.int-1_DeclUniversalDtos.pdf" target="_blank" download="Html.pdf"><strong>Declaración dos <br>Dereitos humanos</strong></a></li> 
+                            <li><a href="documentos\A_48_486_S.pdf" target="_blank" download="Html.pdf"><strong>Acordo de Oslo</strong></a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Nakba"target="_blank"><strong>Nafka</strong></a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Historia_de_Palestina"target="_blank"><strong>Historia de Palestina</strong></a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Declaraci%C3%B3n_Balfour"target="_blank"><strong>Declaración de Balfour</strong></a></li>
+                        </ul>
+                </nav>
+            </aside>
+        </main>
+            <footer>
+                 <!-- Escollin facer un footer sinxelo e manter sen correo xa que teño un formulario de contacto-->
+                Para mais información e contacto 600000000
+                <address>
+                    Podes seguirnos nas nosas redes sociais "https://www.facebook.com/Palestina-Gal-102285698161179"
+                    <br>Podes escribirnos a <a href="mailto:palestina.gal@gmail.com">Palestina.gal</a>
+                </address>
+                <a href="Inicio.html">voltar o inicio</a>
+            </footer>
+    </body>
+</html>

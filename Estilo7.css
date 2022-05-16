@@ -1,0 +1,181 @@
+:root {
+    --branco: #ffffff;
+    --preto: #212121;
+    --verde: green;
+    --vermello: red;
+    --gris1: rgb(65, 64, 64);
+    --gris2: grey;
+    --gris3: rgb(189, 188, 188);
+    --azul: rgb(79, 162, 230);
+    --amarelo: #ffc107;
+}
+/* Globais */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+header,
+section,
+.menu-principal,
+form,
+footer {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+body{
+    font-size: 16px; /* un rem é = a 10px */
+    font-family: 'Lora', serif;
+    background-image: linear-gradient(to top, #dfe9f3, var(--gris3) 100%);
+}
+.portada {
+    background-image: url(../image/palestine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+    width: 100%;
+}
+h1 {
+    color: black;
+    padding: 1px 3rem;
+    margin-top: 1rem;
+    font-size: 8rem; 
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+h1 span {
+    color: rgb(197, 12, 12);
+}
+.nav-bg{
+    background-color: var(--gris1);
+    float: center;
+    list-style: none;   
+}   
+.menu-principal{
+    height: 5rem;
+    text-align: center;
+    text-overflow: clip;
+    padding: 1rem;
+}
+.menu-principal a {
+    display: inline;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 1rem;
+}
+.menu-principal a:hover {
+    background-color: rgba(255, 0, 0, 0.486);
+    color: var(--preto);
+}
+.contentor {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px;
+    float: left;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+}
+.sombra {
+    -webkit-box-shadow: 6px 6px 33px -4px rgba(0,0,0,0.76);
+    -moz-box-shadow: 6px 6px 33px -4px rgba(0,0,0,0.76);
+    box-shadow: 6px 6px 33px -4px rgba(0,0,0,0.76);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+/* CONTIDO */
+
+section h2 {
+    color: rgb(66, 5, 5);
+    text-transform: uppercase;
+}
+section h3 {
+    color: rgb(32, 2, 2);
+}
+section p {
+    line-height: 1.5;
+    font-weight: normal;
+}
+form {
+    background-color: rgba(173, 62, 42, 0.7) ;
+    width: min(80rem, 100%) ;/* emprega o valor máis pequeno */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: inline-flex;
+}
+form fieldset {
+    border: none;
+}
+form legend {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--gris3);
+}
+form p {
+    font-size: small;
+}
+.contenedor-campos {
+
+}
+.campo {
+
+}
+.campo label {
+    color: var(--preto);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo input {
+    background-color: grey;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.boton {
+    background-color: rgb(224, 131, 131);
+    color:rgb(0, 0, 0);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: .bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+.boton:hover {
+
+}
+aside {
+    float: left;
+    background-color: rgba(94, 134, 67, 0.7) ;
+    width:min(25rem, 25%) ;/* emprega o valor máis pequeno */
+    margin: 0 auto;
+    padding:3rem;
+    border-radius: 1rem;
+    display:flex
+}
+footer {
+    clear: both;
+    text-align: center;
+}
+
+
+
+
+
+
+
